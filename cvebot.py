@@ -15,8 +15,8 @@ channel       = "#deshi"
 
 #ADMINISTRATION
 admins           = [r"deshi"]
-botnick          = "evildeshi"
-nickserv_pass    = "master"
+botnick          = "CVE-Bot"
+nickserv_pass    = ""
 check_alert_freq = 1 #HOW OFTEN (IN HOURS) TO CHECK RSS FEEDS
 
 #FEATURES
@@ -47,7 +47,7 @@ def check_alerts():
 
 def authenticate():
         ircsock.send("PRIVMSG NickServ IDENTIFY " + nickserv_pass + "\n")
-
+	ircsock.send( 'JOIN #deshi\n' )
 def ping(code):
         code = code[6:14]
         ircsock.send("PONG :%s\n" % code)
@@ -61,7 +61,7 @@ def sendmultimsg(chan, msgs):
 		sendmsg(chan, msg)
 
 def joinchan(chan):
-        ircsock.send( 'JOIN #deshi\r\n' )
+        ircsock.send( 'JOIN #deshi\n' )
 
 def get_msg(ircmsg):
 	ircmsg = ircmsg[ircmsg.find("PRIVMSG "):]
@@ -205,7 +205,6 @@ if password: ircsock.send("PASS " + password + "\n")
 ircsock.send("USER " + botnick + " " + botnick + " " + botnick + " :cve-bot v1.0\n")
 ircsock.send("NICK " + botnick + "\n")
 
-joinchan(channel)
 
 alert_checker = threading.Thread(target=check_alerts_thread)
 alert_checker.daemon = True
