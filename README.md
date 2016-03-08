@@ -1,4 +1,4 @@
-# CVE-Bot v1
+# CVE-Bot v1.2
 Very simple IRC bot that announces RSS feeds every hour (by default). Can be forced to check for alerts using the GETALERTS command.
 
 
