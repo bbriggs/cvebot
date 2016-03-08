@@ -202,7 +202,7 @@ def rss_del(ircmsg):
 ircsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 ircsock.connect((server, port))
 if password: ircsock.send("PASS " + password + "\n")
-ircsock.send("USER " + botnick + " " + botnick + " " + botnick + " :The Eh Team's InfoSec_Alert PyBot v1.0\n")
+ircsock.send("USER " + botnick + " " + botnick + " " + botnick + " :Deshi's cve-bot v1.2\n")
 ircsock.send("NICK " + botnick + "\n")
 
 
