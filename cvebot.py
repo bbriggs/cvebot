@@ -15,7 +15,7 @@ channel       = "#deshi"
 #ADMINISTRATION
 admins           = [r"\x6c\x65\x6f", "Deshi"]
 botnick          = "evildeshi"
-nickserv_pass    = "master"
+nickserv_pass    = ""
 check_alert_freq = 1 #HOW OFTEN (IN HOURS) TO CHECK RSS FEEDS
 
 #FEATURES
