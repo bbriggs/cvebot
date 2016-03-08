@@ -4,5 +4,5 @@ Very simple IRC bot that announces RSS feeds every hour (by default). Can be for
 
 Configuration:
 
-1. Under "pybot.py" you must configure the server information between lines 11-14, and the administration information between lines 17-20.
+1. Under "cvebot.py" you must configure the server information between lines 11-14, and the administration information between lines 17-20.
 2. Under "rss.py" you must configure the the RSS feeds between lines 13-17.
